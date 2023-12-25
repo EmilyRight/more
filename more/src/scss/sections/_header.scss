@@ -1,0 +1,21 @@
+.section-header {
+  padding-top: 5rem;
+  .logo {
+    width: 5rem;
+    display: block;
+    img {
+      max-width: 100%;
+    }
+  }
+  @media (min-width: 600px) {
+    padding-top: 8.5rem;
+
+    .container{
+      padding-left: 7.5rem;
+    }
+
+    .logo {
+      width: 6.8rem;
+    }
+  }
+}

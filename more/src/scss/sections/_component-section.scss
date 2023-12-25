@@ -1,0 +1,92 @@
+.component-section {
+  padding: 3.6rem 1.8rem 0 1.8rem;
+  .section {
+    &__text-block {
+      order: 1;
+    }
+
+    &__label {
+      display: inline-block;
+      font-family: $font1;
+      font-size: 1.2rem;
+      line-height: 0.75;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: #b2eaff;
+      border-radius: 0.8rem;
+      background: rgba(63, 203, 255, 0.16);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.8rem;
+      span {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+
+    &__title {
+      font-size: 2.8rem;
+      line-height: 3.6rem;
+
+      @media (min-width: 600px) {
+        font-size: 4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+      }
+    }
+
+    &__text {
+      margin-bottom: 3.6rem;
+    }
+
+    &__picture {
+      order: 2;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 3.6rem 1.8rem 0 1.8rem;
+    gap: 3.6rem;
+  }
+  
+  .btn {
+    margin: 0;
+  }
+
+  .dark-block {
+    background-color: #1f2229;
+    border-radius: 1.6rem;
+    @media (min-width: 601px) {
+      border-radius: 3rem;
+    }
+  }
+
+  .picture-box {
+    &__image {
+      display: block;
+      max-width: 110%;
+      margin-left: -1rem;
+    }
+  }
+  @media (min-width: 600px) {
+    padding-top: 10rem;
+    padding-bottom: 0;
+    .section {
+      &__text-block {
+        order: 2;
+        width: 50%;
+      }
+      &__picture {
+        order: 1;
+      }
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      padding: 6rem;
+      gap: 3.6rem;
+    }
+  }
+}

@@ -1,0 +1,127 @@
+.section-market {
+  padding-top: 3.6rem;
+  padding-bottom: 0rem;
+  .section {
+    &__text-block {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__label {
+      max-width: fit-content;
+    }
+  }
+
+  .container {
+    padding: 3.6rem 1.8rem 2.2rem 1.8rem;
+    gap: 2rem;
+  }
+  
+  .picture-box {
+    position: relative;
+    z-index: 1;
+    &:before {
+      position: absolute;
+      content: "";
+      width: 15rem;
+      height: 15rem;
+      opacity: 0.6;
+      background: radial-gradient(50% 50% at 50% 50%, #ff59a3 0%, #ff59a3 100%);
+
+      mix-blend-mode: color-dodge;
+      filter: blur(100px);
+      mix-blend-mode: hard-light;
+      will-change: filter;
+      filter: blur(90px);
+      z-index: -1;
+      left: 30%;
+      top: 20%;
+      transform: translate(-50%, -50%);
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 20rem;
+      height: 20rem;
+      right: 0%;
+      bottom: 0%;
+      z-index: -1;
+      background: radial-gradient(
+        52.37% 47.15% at 36.09% 54.95%,
+        #8296ff 0%,
+        rgba(130, 150, 255, 0.2) 100%
+      );
+      will-change: filter;
+      filter: blur(90px);
+    }
+  }
+
+  .picture-box__image {
+    max-width: 120%;
+    margin-left: -2.5rem;
+    display: block;
+  }
+
+  .btn {
+    align-self: flex-start;
+  }
+
+  @media (min-width: 600px) {
+    padding-top: 6rem;
+
+    .container {
+      padding: 6rem;
+      padding-bottom: 0;
+    }
+
+    .section {
+      &__text-block {
+        align-items: flex-start;
+        order: 1;
+        width: 50%;
+      }
+
+      &__picture {
+        order: 2;
+        width: 50%;
+      }
+    }
+
+    .card-box {
+      display: flex;
+      flex-direction: row;
+      gap: 3.6rem;
+      margin-bottom: 3.6rem;
+
+      &__item {
+        padding: 3.6rem;
+        border-radius: 1.6rem;
+        background: #262931;
+        flex-basis: 50%;
+      }
+    }
+
+    .card {
+      &__title {
+        font-size: 2.8rem;
+        line-height: 120%;
+        margin-bottom: 1.8rem;
+      }
+
+      &__text {
+        color: #fff;
+        font-family: $font1;
+        font-size: 1.6rem;
+        line-height: 130%;
+      }
+    }
+
+    .picture-box__image {
+      width: 105%;
+      margin-top: -7.5rem;
+      margin-left: 0;
+      display: block;
+    }
+  }
+}

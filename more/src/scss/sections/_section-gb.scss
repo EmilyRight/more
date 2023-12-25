@@ -1,0 +1,83 @@
+.section-gb {
+  padding-bottom: 3.6rem;
+
+  .container {
+    gap: 2rem;
+  }
+
+  .section {
+    &__img {
+      position: absolute;
+      top: -5%;
+      right: 8%;
+      z-index: 11;
+      max-width: 15rem;
+    }
+  }
+
+  @media (min-width: 600px) {
+    padding-top: 6rem;
+    padding-bottom: 0;
+
+    .container {
+      padding-bottom: 6rem;
+      align-items: center;
+      gap: 0;
+      overflow: hidden;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 31rem;
+        height: 29rem;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          #3fcbff 0%,
+          rgba(63, 203, 255, 0) 100%
+        );
+
+        left: -10%;
+        bottom: -20%;
+        will-change: filter;
+        filter: blur(90px);
+      }
+    }
+
+    .btn {
+      margin: 0;
+    }
+
+    .section {
+      &__text-block {
+        order: 2;
+        width: 48.5%;
+      }
+
+      &__text {
+        max-width: 90%;
+      }
+
+      &__picture {
+        order: 1;
+        width: 51.5%;
+      }
+
+      &__img {
+        top: -10%;
+        right: 16%;
+        z-index: 10;
+        max-width: 18rem;
+      }
+    }
+
+    .picture-box {
+      &__image {
+        width: 43vw;
+        margin: -7rem 0 0 -10%;
+        position: absolute;
+        top: 13%;
+        left: 10%;
+      }
+    }
+  }
+}

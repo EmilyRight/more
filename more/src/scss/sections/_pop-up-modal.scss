@@ -1,0 +1,210 @@
+//NEW MODAL BOX
+.modal-box-viewed {
+  overflow: hidden !important;
+} //body noscroll
+
+.popup-modal {
+  position: fixed;
+  z-index: 1000;
+  transition: opacity 0.5s;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.popup-modal-hidden {
+    pointer-events: none;
+    transform: translateX(120%);
+    opacity: 0;
+  }
+
+  &:not(.popup-modal-hidden) {
+    &:before {
+      background: rgba(3, 3, 3, 0.549);
+      content: "";
+      position: fixed;
+      top: -5rem;
+      bottom: -5rem;
+      min-height: 100vh;
+      left: 0;
+      right: 0;
+      width: 100vw;
+    }
+  }
+
+  @media all and (min-width: 768px) {
+    display: flex;
+    overflow-y: visible;
+    justify-content: center;
+    align-items: center;
+    // &:before{background: $color-dark !important;}
+  }
+
+  .modal-box {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    height: auto;
+    max-width: 85%;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 3rem;
+    max-width: 80%;
+    z-index: 100;
+
+    &__content {
+      max-width: 100%;
+      height: 100%;
+      padding: 3.2rem 3.6rem;
+      position: relative;
+      background-color: $color-dark;
+      border-radius: 3rem;
+    }
+
+    &__background {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 3rem;
+      background: linear-gradient(90deg, #c982fff4 0%, #FF59A3 100%);
+      z-index: 0;
+      will-change: filter;
+      filter: blur(10px);
+    }
+
+    p {
+      font-family: $font1;
+      font-size: 1.6rem;
+      margin-bottom: 3.2rem;
+    }
+
+    &__list {
+      padding-left: 1rem;
+      font-family: $font1;
+      list-style: disc;
+      margin-bottom: 2.2rem;
+    }
+
+    &__header {
+      position: relative;
+      font-size: 1.9rem;
+      line-height: 2.6rem;
+      display: flex;
+      justify-content: space-between;
+      h2,
+      h3,
+      h4 {
+        font-family: $font1;
+      }
+      h4 {
+        font-size: 2.2rem;
+        margin: 0;
+        margin-bottom: 2.4rem;
+        line-height: 2.8rem;
+      }
+      .close {
+        width: 3.2rem;
+        height: 3.2rem;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: 0.3s;
+        line-height: 2.8rem;
+        svg {
+          max-width: 100%;
+          max-height: 100%;
+        }
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+    &__body {
+      flex: 100% 1 1;
+      -ms-flex: 100% 1 auto;
+    }
+    &__actions {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      -webkit-tap-highlight-color: transparent;
+      &.centered {
+        justify-content: center;
+      }
+    }
+
+    &.modal-box--dark {
+      background: $color-dark;
+      i,
+      h2,
+      h3,
+      h4,
+      h5,
+      a,
+      p {
+        color: #fff;
+      }
+      .btn {
+        border-color: #fff;
+      }
+
+      .btn {
+        background-color: transparent;
+        border-color: #fff;
+        color: #fff;
+        &:hover {
+          color: $color-lightgray2;
+          border-color: $color-lightgray2;
+        }
+        &.disabled,
+        &:disabled {
+          color: $color-lightgray2;
+          background: transparent;
+          border-color: $color-lightgray2;
+          cursor: default !important;
+        }
+      }
+    }
+    &.modal-box-active {
+      z-index: 100;
+      display: flex;
+      //padding-bottom: 70px;transform: translateY(70px);
+    }
+
+    @media all and (min-width: 768px) {
+      max-width: 760px;
+      top: auto;
+      left: auto;
+      transform: none;
+      &:not(.modal-box--dark) {
+        border: 2px solid $color-lightgray2;
+        padding: 2rem;
+      }
+
+      &__header {
+        text-align: left;
+        margin-bottom: 1.6rem;
+
+        h2,
+        h3 {
+          font-size: 3.8rem;
+        }
+      }
+      &__actions {
+        flex-direction: row;
+        display: flex;
+        .btn {
+          margin: 0 2rem 0 0;
+        }
+      }
+    }
+  }
+}
