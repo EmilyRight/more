@@ -1,7 +1,26 @@
 .section-about {
   .container {
+    overflow: hidden;
     padding-bottom: 1.6rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 31rem;
+      height: 29rem;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        #3fcbff 0%,
+        rgba(63, 203, 255, 0) 100%
+      );
+
+      left: -10%;
+      bottom: -20%;
+      will-change: filter;
+      filter: blur(90px);
+    }
   }
+
   .section {
     &__img {
       position: absolute;
@@ -24,23 +43,6 @@
       gap: 0;
       padding-bottom: 4rem;
       overflow: hidden;
-      position: relative;
-      &::before {
-        content: "";
-        position: absolute;
-        width: 31rem;
-        height: 29rem;
-        background: radial-gradient(
-          50% 50% at 50% 50%,
-          #3fcbff 0%,
-          rgba(63, 203, 255, 0) 100%
-        );
-
-        left: -10%;
-        bottom: -20%;
-        will-change: filter;
-        filter: blur(90px);
-      }
     }
     .section {
       &__text-block {

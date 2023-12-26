@@ -12,36 +12,41 @@
     &:before {
       position: absolute;
       content: "";
-      width: 15rem;
-      height: 15rem;
-      opacity: 0.6;
-      background: radial-gradient(50% 50% at 50% 50%, #ff59a3 0%, #ff59a3 100%);
+      width: 20rem;
+      height: 12rem;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        #ff59a3 0%,
+        rgba(255, 89, 163, 0) 100%
+      );
 
-      mix-blend-mode: color-dodge;
-      filter: blur(100px);
-      mix-blend-mode: hard-light;
+      mix-blend-mode: plus-lighter;
       will-change: filter;
-      filter: blur(90px);
+      filter: blur(35px);
       z-index: -1;
-      left: 30%;
+      left: 15%;
       top: 20%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) rotate(16.414deg);
     }
     &::after {
       position: absolute;
       content: "";
-      width: 20rem;
-      height: 20rem;
-      right: 0%;
+      width: 35rem;
+      height: 23rem;
+      right: -30%;
       bottom: 0%;
       z-index: -1;
+      opacity: 0.6;
       background: radial-gradient(
-        52.37% 47.15% at 36.09% 54.95%,
-        #8296ff 0%,
-        rgba(130, 150, 255, 0.2) 100%
+        50% 50% at 50% 50%,
+        #3fcbff 0%,
+        rgba(63, 203, 255, 0) 100%
       );
+
+      mix-blend-mode: screen;
       will-change: filter;
-      filter: blur(90px);
+      filter: blur(50px);
+      transform: rotate(16.414deg);
     }
     &__image {
       max-width: 118%;
@@ -81,9 +86,38 @@
 
     .picture-box {
       &:before {
-        width: 30rem;
-        height: 30rem;
+        width: 38rem;
+        height: 38rem;
+        border-radius: 380.126px;
+        opacity: 0.8;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          #d4186c 0%,
+          rgba(181, 43, 105, 0) 100%,
+          rgba(212, 24, 108, 0) 100%
+        );
+        will-change: filter;
+        mix-blend-mode: plus-lighter;
+        filter: blur(100px);
+        left: 25%;
+        top: 20%;
       }
+      &::after {
+
+        width: 53rem;
+        height: 28rem;
+        right: -10%;
+        bottom: -25%;
+        mix-blend-mode: screen;
+        will-change: filter;
+        border-radius: 532.575px;
+        opacity: 0.4;
+        background: #3fcbff;
+        mix-blend-mode: screen;
+        filter: blur(150px);
+        transform: rotate(16.414deg);
+      }
+      
       &__image {
         width: 88%;
         max-width: none;

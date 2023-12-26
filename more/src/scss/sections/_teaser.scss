@@ -73,7 +73,6 @@
     &__picture {
       display: flex;
       justify-content: center;
-
     }
 
     &__image {
@@ -149,7 +148,7 @@
         content: "";
         width: 20rem;
         height: 20rem;
-        right: 0%;
+        right: 20%;
         bottom: 0%;
         z-index: -1;
         background: radial-gradient(

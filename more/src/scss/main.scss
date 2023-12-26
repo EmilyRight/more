@@ -7,11 +7,10 @@ html {
 }
 body {
   overflow-x: hidden;
-
   overflow-y: scroll;
   min-width: 320px;
   margin: 0;
-  background: inherit;
+  background: $color-dark;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: none;
@@ -25,11 +24,12 @@ body {
 //LANDING STYLES
 body {
   color: $color-dark;
-  background-color: #1f2229;
+  background-color: $color-dark;
   font: 1.6rem/1.375 tele2_short, sans-serif;
   -webkit-text-size-adjust: none;
   &.noscroll {
     overflow: hidden !important;
+    padding-right: 21px;
   }
 
   .page {
@@ -135,10 +135,12 @@ body {
   display: block;
   width: 4.3rem;
   height: 4.3rem;
+  max-width: 43px;
+  max-height: 43px;
   cursor: pointer;
   transition: 0.4s;
   svg {
-    max-height: 2.5rem;
+    max-height: 25px;
   }
   &:hover {
     transform: scale(0.9);
@@ -151,6 +153,8 @@ body {
   @media (min-width: 600px) {
     width: 6rem;
     height: 6rem;
+    max-width: 60px;
+    max-height: 60px;
   }
 }
 

@@ -11,6 +11,10 @@
     &__label {
       max-width: fit-content;
     }
+
+    &__img {
+      display: none;
+    }
   }
 
   .container {
@@ -69,6 +73,21 @@
 
       &__title {
         margin-bottom: 3.6rem;
+      }
+
+      &__img {
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: -18%;
+        right: 34%;
+        transform: rotate(30deg);
+        z-index: -1;
+        max-width: 14rem;
+        img {
+          display: block;
+          max-width: 100%;
+        }
       }
     }
 

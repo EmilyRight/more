@@ -1,6 +1,7 @@
 .section-calls {
   padding-top: 0rem;
   padding-bottom: 5.4rem;
+  overflow: hidden;
   .container {
     gap: 2rem;
   }
@@ -50,7 +51,7 @@
   }
 
   @media (min-width: 600px) {
-    padding-top: 2.5rem;
+    padding-top: 5.5rem;
     padding-bottom: 5.5rem;
 
     br {
@@ -84,6 +85,43 @@
     }
 
     .picture-box {
+      &:before {
+        width: 25rem;
+        height: 30rem;
+        opacity: 0.6;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          #f582ff 0%,
+          rgba(181, 43, 105, 0) 100%,
+          #f582ff 100%
+        );
+
+        mix-blend-mode: plus-lighter;
+        will-change: filter;
+        filter: blur(100px);
+        left: 30%;
+        top: 20%;
+        transform: translate(-50%, -50%) rotate(16.414deg);
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        width: 40rem;
+        height: 28rem;
+        right: 0%;
+        bottom: 0%;
+        z-index: -1;
+        border-radius: 409.263px;
+        opacity: 0.8;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          #3fcbff 0%,
+          rgba(63, 203, 255, 0) 100%
+        );
+        will-change: filter;
+        filter: blur(150px);
+      }
+      
       &__image {
         width: 122%;
         max-width: none;

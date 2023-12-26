@@ -10,35 +10,34 @@
     &:before {
       position: absolute;
       content: "";
-      width: 15rem;
-      height: 15rem;
+      width: 21rem;
+      height: 17rem;
       opacity: 0.6;
       background: radial-gradient(50% 50% at 50% 50%, #ff59a3 0%, #ff59a3 100%);
-
-      mix-blend-mode: color-dodge;
-      filter: blur(100px);
-      mix-blend-mode: hard-light;
+      border-radius: 50%;
+      filter: blur(50px);
       will-change: filter;
       z-index: -1;
       left: 20%;
-      top: 30%;
-      transform: translate(-50%, -50%);
+      top: 45%;
+      transform: translate(-50%, -50%) rotate(16.414deg);
     }
+
     &::after {
       position: absolute;
       content: "";
-      width: 20rem;
-      height: 20rem;
+      width: 28rem;
+      height: 14rem;
       right: 0%;
       bottom: 0%;
       z-index: -1;
-      background: radial-gradient(
-        52.37% 47.15% at 36.09% 54.95%,
-        #8296ff 0%,
-        rgba(130, 150, 255, 0.2) 100%
-      );
+      opacity: 0.8;
+      background: #3fcbff;
+
+      mix-blend-mode: screen;
       will-change: filter;
       filter: blur(90px);
+      transform: rotate(16.414deg);
     }
     &__image {
       max-width: 90%;
@@ -71,6 +70,38 @@
     }
 
     .picture-box {
+      &:before {
+        width: 26rem;
+        height: 24rem;
+        opacity: 0.8;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          #ff59a3 0%,
+          #ff59a3 100%
+        );
+
+        will-change: filter;
+        filter: blur(100px);
+        left: 40%;
+        top: 45%;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 28rem;
+        height: 14rem;
+        right: 0%;
+        bottom: 0%;
+        z-index: -1;
+        opacity: 0.8;
+        background: #3fcbff;
+        mix-blend-mode: screen;
+        will-change: filter;
+        filter: blur(90px);
+        transform: rotate(16.414deg);
+      }
+
       &__image {
         width: 100%;
         max-width: none;
