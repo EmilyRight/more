@@ -1,3 +1,9 @@
+
+@import "vars";
+@import "./mixins";
+@import "base/base-reset";
+@import "typo";
+
 html {
   min-height: 100%;
   box-sizing: border-box;
@@ -10,16 +16,12 @@ body {
   overflow-y: scroll;
   min-width: 320px;
   margin: 0;
-  background: $color-dark;
+  background-color: $color-dark;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: none;
 }
 
-@import "vars";
-@import "./mixins";
-@import "base/base-reset";
-@import "typo";
 
 //LANDING STYLES
 body {

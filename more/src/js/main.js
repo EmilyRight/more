@@ -18,11 +18,11 @@ window.addEventListener('load', () => {
   goNextSection();
   scrollTeaser(document.querySelector('.section-about'));
   openPopup();
-  document.addEventListener('scroll', () => {
-    countScroll();
-    showBtn();
-  });
-  handleUpBtn();
+});
+
+window.addEventListener('scroll', () => {
+  countScroll();
+  showBtn();
 });
 
 function goNextSection() {
@@ -47,7 +47,8 @@ function openPopup() {
   const popupLinksList = document.querySelectorAll('.popup__link');
   popupLinksList.forEach((popupLink) => {
     const modalName = popupLink.dataset.modal;
-    popupLink.addEventListener('click', () => openModal(modalName));
+    const id = popupLink.dataset.event;
+    popupLink.addEventListener('click', () => openModal(modalName, id));
   });
 }
 
@@ -62,5 +63,6 @@ function scrollToElement(el) {
 function scrollTeaser(el) {
   if (window.location.hash === '#about') {
     scrollToElement(el);
+    showBtn();
   }
 }

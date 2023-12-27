@@ -46,7 +46,7 @@ function handleScrollBar() {
   const options = {
     root: null,
     rootMargin: '5px',
-    threshold: 0.5,
+    threshold: 0,
   };
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

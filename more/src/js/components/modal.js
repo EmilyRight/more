@@ -17,7 +17,16 @@ function getScrollbarWidth() {
   return scrollbarWidth;
 }
 
-export function openModal(modalBoxName) {
+function setAttributes(modal, btnName) {
+  const connectBtn = modal.querySelector('.connect-btn');
+  const alreadyBtn = modal.querySelector('.already-btn');
+  connectBtn.dataset.event = `conv_connect_${btnName}`;
+  alreadyBtn.dataset.event = `conv_connect_${btnName}`;
+  connectBtn.dataset.context = `${btnName}`;
+  alreadyBtn.dataset.context = `${btnName}`;
+}
+
+export function openModal(modalBoxName, name) {
   const modalBox = defineModal(modalBoxName);
 
   const modal = modalBox.closest('.popup-modal');
@@ -26,6 +35,7 @@ export function openModal(modalBoxName) {
   body.classList.add(noscroll);
   modal.classList.remove(hidden);
   modalBox.classList.add(active);
+  setAttributes(modalBox, name);
 
   // закрыть эту модалку
   modal.addEventListener('click', (e) => {
