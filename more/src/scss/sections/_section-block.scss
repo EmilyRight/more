@@ -53,12 +53,16 @@
       margin-left: -1.8rem;
       display: block;
     }
+
+    &__layer_glitter {
+      position: absolute;
+    }
   }
 
   @media (min-width: 600px) {
     padding-top: 9.5rem;
     padding-bottom: 6rem;
-    
+
     .container {
       padding-top: 2.5rem;
       gap: 0;
@@ -103,7 +107,6 @@
         top: 20%;
       }
       &::after {
-
         width: 53rem;
         height: 28rem;
         right: -10%;
