@@ -3,6 +3,7 @@
     overflow: hidden;
     padding-bottom: 1.6rem;
     position: relative;
+    z-index: 1;
     &::before {
       content: "";
       position: absolute;
@@ -41,7 +42,7 @@
     padding-bottom: 0rem;
     .container {
       gap: 0;
-      padding-bottom: 4rem;
+      padding-bottom: 6rem;
       overflow: hidden;
     }
     .section {

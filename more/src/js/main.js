@@ -2,10 +2,9 @@ import { WOW } from './vendor/wow.min';
 import detectDevice from './components/detectDevice';
 
 import GTMEvents from './components/gtmEvents';
-import videoTeaser from './components/videoTeaser';
 import { countScroll, getCurrentYear } from './components/utils';
 import { openModal } from './components/modal';
-import { handleUpBtn, scrollToTop, showBtn } from './components/upScrollBtn';
+import { showBtn } from './components/upScrollBtn';
 
 const GTM = new GTMEvents();
 
@@ -16,7 +15,7 @@ window.addEventListener('load', () => {
   GTM.addEventListeners();
   getCurrentYear();
   goNextSection();
-  scrollTeaser(document.querySelector('.section-about'));
+  scrollToBlock();
   openPopup();
 });
 
@@ -48,7 +47,8 @@ function openPopup() {
   popupLinksList.forEach((popupLink) => {
     const modalName = popupLink.dataset.modal;
     const id = popupLink.dataset.event;
-    popupLink.addEventListener('click', () => openModal(modalName, id));
+    const { action } = popupLink.dataset;
+    popupLink.addEventListener('click', () => openModal(modalName, id, action));
   });
 }
 
@@ -60,9 +60,11 @@ function scrollToElement(el) {
 
 // scroll to next if URL contains #about
 
-function scrollTeaser(el) {
-  if (window.location.hash === '#about') {
-    scrollToElement(el);
+function scrollToBlock() {
+  const { hash } = window.location;
+  if (hash) {
+    const element = document.getElementById(`${hash}`);
+    scrollToElement(element);
     showBtn();
   }
 }

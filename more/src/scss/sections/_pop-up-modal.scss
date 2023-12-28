@@ -113,6 +113,9 @@
         margin-bottom: 2.4rem;
         line-height: 2.8rem;
       }
+      .modal-box__title.hidden {
+        opacity: 0;
+      }
       .close {
         width: 3.2rem;
         height: 3.2rem;
@@ -132,6 +135,10 @@
     &__body {
       flex: 100% 1 1;
       -ms-flex: 100% 1 auto;
+      font-family: $font1;
+      color: #fff;
+      font-size: 1.6rem;
+      margin-bottom: 3.2rem;
     }
     &__actions {
       display: flex;

@@ -1,7 +1,7 @@
-const hidden = 'popup-modal-hidden';
-const active = 'modal-box-active';
-const noscroll = 'modal-box-viewed';
-const closeIconClassName = 'close';
+import {
+  links, hidden, active, noscroll, oldText, newText, closeIconClassName,
+} from '../constants';
+
 const { body } = document;
 
 function defineModal(modalBoxName) {
@@ -17,16 +17,26 @@ function getScrollbarWidth() {
   return scrollbarWidth;
 }
 
-function setAttributes(modal, btnName) {
+function setAttributes(modal, btnName, action) {
   const connectBtn = modal.querySelector('.connect-btn');
   const alreadyBtn = modal.querySelector('.already-btn');
+  const modalContent = modal.querySelector('.modal-box__content');
   connectBtn.dataset.event = `conv_connect_${btnName}`;
   alreadyBtn.dataset.event = `conv_connect_${btnName}`;
   connectBtn.dataset.context = `${btnName}`;
   alreadyBtn.dataset.context = `${btnName}`;
+  alreadyBtn.addEventListener('click', (event) => {
+    if (action === 'change-text') {
+      event.preventDefault();
+      modalContent.innerHTML = newText;
+    } else {
+      alreadyBtn.setAttribute('target', '_blank');
+      alreadyBtn.href = links[action];
+    }
+  });
 }
 
-export function openModal(modalBoxName, name) {
+export function openModal(modalBoxName, name, action) {
   const modalBox = defineModal(modalBoxName);
 
   const modal = modalBox.closest('.popup-modal');
@@ -35,7 +45,7 @@ export function openModal(modalBoxName, name) {
   body.classList.add(noscroll);
   modal.classList.remove(hidden);
   modalBox.classList.add(active);
-  setAttributes(modalBox, name);
+  setAttributes(modalBox, name, action);
 
   // закрыть эту модалку
   modal.addEventListener('click', (e) => {
@@ -45,14 +55,18 @@ export function openModal(modalBoxName, name) {
       ? target
       : target.closest(`.${closeIconClassName}`);
 
-    if (!target.closest('.modal-box') || closeModalButton) {
+    if (closeModalButton) {
       closeModal(modalBox);
     }
   });
 }
 
 export function closeModal(modalBox) {
+  const modalContent = document.querySelector('.modal-box__content');
+  const modalHeader = document.querySelector('.modal-box__title');
   body.classList.remove(noscroll);
   body.style.paddingRight = '0px';
   modalBox.closest('.popup-modal').classList.add(hidden);
+  modalContent.innerHTML = oldText;
+  modalHeader.classList.remove('hidden');
 }

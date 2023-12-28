@@ -1,8 +1,8 @@
-
 @import "vars";
 @import "./mixins";
 @import "base/base-reset";
 @import "typo";
+@import "./fonts";
 
 html {
   min-height: 100%;
@@ -11,6 +11,7 @@ html {
   background-color: #1f2229;
   scroll-behavior: smooth;
 }
+
 body {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -21,7 +22,6 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: none;
 }
-
 
 //LANDING STYLES
 body {
@@ -116,6 +116,7 @@ body {
 
 .section__title {
   font-family: $fontStencil;
+  font-weight: 400;
   text-transform: uppercase;
   color: #fff;
   font-size: 2.8rem;

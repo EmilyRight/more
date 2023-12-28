@@ -1,7 +1,7 @@
 .teaser {
   padding-bottom: 3.6rem;
   .container {
-    margin-top: -2.8rem;
+    // margin-top: -2.8rem;
   }
   .section {
     &__container {
@@ -31,6 +31,7 @@
     position: relative;
     z-index: 1;
     left: 9%;
+    margin-top: -2.8rem;
     &:before {
       position: absolute;
       content: "";
@@ -73,13 +74,43 @@
       position: absolute;
       width: 100%;
       height: fit-content;
-      top: 0;
-      left: 0;
-      animation: rotate 5s linear 0s infinite normal forwards;
       img {
         display: block;
         max-width: 100%;
       }
+    }
+    .glitter1 {
+      top: -5%;
+      left: 0;
+      animation: rotate 5s linear 0s infinite normal forwards;
+    }
+
+    .glitter2 {
+      top: 45%;
+      right: -25%;
+      animation: rotate 7s linear 3s infinite normal forwards;
+    }
+
+    .glitter3 {
+      top: 10%;
+      left: -33%;
+      animation: rotate 5s linear 7s infinite normal forwards;
+    }
+
+    .glitter4 {
+      top: 35%;
+      left: 32%;
+      max-width: 30%;
+      animation: shine 3s linear 5s infinite normal forwards;
+    }
+
+    .glitter5 {
+      top: 30%;
+      right: 17%;
+      opacity: 0.6;
+      max-width: 25%;
+      transform: rotate(90deg);
+      animation: shine 4s linear 0s infinite normal forwards;
     }
 
     &__picture {
@@ -95,7 +126,7 @@
 
   @media (min-width: 601px) {
     padding-top: 7.7rem;
-    padding-bottom: 8.6rem;
+    padding-bottom: 5rem;
 
     .container {
       margin-top: 0;
@@ -127,7 +158,9 @@
 
       &__picture {
         order: 2;
-        width: 48%;
+        width: 58rem;
+        max-width: 48%;
+        height: 100%;
       }
     }
 
@@ -136,8 +169,8 @@
     }
 
     .picture-box {
-      margin-top: -11%;
-      margin-left: -5%;
+      margin-top: -10%;
+      margin-left: -6%;
       &:before {
         position: absolute;
         content: "";
@@ -176,20 +209,10 @@
 
       &__layer_glitter {
         position: absolute;
-        width: 100%;
-        height: 100%;
-        top: -5%;
-        left: 5%;
-        animation: rotate 5s linear 0s infinite normal forwards;
-        transform-origin: 45% 25%;
-        &:before {
-          position: absolute;
-          content: "";
-          width: 5px;
-          height: 5px;
-          top: 25%;
-          left: 45%;
-        }
+        max-width: 100%;
+        animation: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
         picture {
           display: block;
           height: fit-content;
@@ -197,17 +220,38 @@
         img {
           display: block;
           max-width: 100%;
-          max-width: none;
         }
+      }
+      .glitter1 {
+        top: -5%;
+        left: 5%;
+        transform-origin: 44% 48%;
+      }
+
+      .glitter2 {
+        top: 45%;
+        right: -30%;
+        transform-origin: 44.5% 50%;
+      }
+
+      .glitter3 {
+        top: 13%;
+        left: -28%;
+        transform-origin: 44.5% 45%;
+      }
+
+      .glitter4 {
+        top: 45%;
+        left: 35%;
+        transform-origin: 30.5% 50%;
+        max-width: 20%;
+        opacity: 0.8;
       }
 
       &__layer_main {
-
         img {
           display: block;
-          width: 100%;
-          max-width: none;
-
+          max-width: 100%;
         }
       }
     }
@@ -223,5 +267,20 @@
   }
   100% {
     transform: rotate(0deg) scale(0);
+  }
+}
+
+@keyframes shine {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
   }
 }

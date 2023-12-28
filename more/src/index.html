@@ -204,7 +204,9 @@
                   />
                 </picture>
               </div>
-              <div class="picture-box__layer picture-box__layer_glitter">
+              <div
+                class="picture-box__layer picture-box__layer_glitter glitter1"
+              >
                 <picture class="picture-box__picture">
                   <img
                     class="picture-box__image"
@@ -213,11 +215,58 @@
                   />
                 </picture>
               </div>
+              <div
+                class="picture-box__layer picture-box__layer_glitter glitter2"
+              >
+                <picture class="picture-box__picture">
+                  <img
+                    class="picture-box__image"
+                    src="./img/page/glitter2.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div
+                class="picture-box__layer picture-box__layer_glitter glitter3"
+              >
+                <picture class="picture-box__picture">
+                  <img
+                    class="picture-box__image"
+                    src="./img/page/glitter.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div
+                class="picture-box__layer picture-box__layer_glitter glitter4"
+              >
+                <picture class="picture-box__picture">
+                  <img
+                    class="picture-box__image"
+                    src="./img/page/glitter3.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div
+                class="picture-box__layer picture-box__layer_glitter glitter5"
+              >
+                <picture class="picture-box__picture">
+                  <img
+                    class="picture-box__image"
+                    src="./img/page/glitter3.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
             </div>
           </div>
         </section>
 
-        <section class="section section-about dark-bg component-section">
+        <section
+          class="section section-about dark-bg component-section"
+          id="allLeft"
+        >
           <img
             src="./img/page/cryst1.png"
             class="section__img wow changeFilter"
@@ -240,6 +289,7 @@
                 class="btn popup__link observable js-gtm-event"
                 data-modal="info-modal"
                 data-event="take"
+                data-action="change-text"
               >
                 Беру!
               </button>
@@ -260,6 +310,7 @@
       </div>
       <section
         class="section section-sm dark-bg component-section wow fadeInUp"
+        id="unlimited"
         data-wow-delay="0.5s"
       >
         <div class="container">
@@ -278,6 +329,7 @@
               class="btn popup__link js-gtm-event"
               data-modal="info-modal"
               data-event="wish"
+              data-action="change-text"
             >
               Хочу
             </button>
@@ -296,7 +348,10 @@
         </div>
       </section>
 
-      <section class="section section-gb dark-bg component-section">
+      <section
+        class="section section-gb dark-bg component-section"
+        id="shareGb"
+      >
         <img
           src="./img/page/cryst1.png"
           class="section__img wow fadeInDown"
@@ -311,12 +366,13 @@
             <p class="section__text">
               Делитесь интернет-трафиком с&nbsp;друзьями, близкими или
               с&nbsp;любыми другими абонентами Tele2, которые пользуются
-              пакетными тарифами по&nbsp;всей России
+              пакетными тарифами
             </p>
             <button
               class="btn popup__link js-gtm-event"
               data-modal="info-modal"
               data-event="interesting"
+              data-action="gbshare"
             >
               Интересно
             </button>
@@ -328,6 +384,24 @@
                   class="picture-box__image"
                   src="./img/page/gb-img.png"
                   alt="Вечные минуты и ГБ"
+                />
+              </picture>
+            </div>
+            <div class="picture-box__layer picture-box__layer_glitter glitter1">
+              <picture class="picture-box__picture">
+                <img
+                  class="picture-box__image"
+                  src="./img/page/glitter3.png"
+                  alt=""
+                />
+              </picture>
+            </div>
+            <div class="picture-box__layer picture-box__layer_glitter glitter2">
+              <picture class="picture-box__picture">
+                <img
+                  class="picture-box__image"
+                  src="./img/page/glitter2.png"
+                  alt=""
                 />
               </picture>
             </div>
@@ -353,6 +427,7 @@
               class="btn popup__link js-gtm-event"
               data-modal="info-modal"
               data-event="howto"
+              data-action="change-text"
             >
               Как воспользоваться?
             </button>
@@ -412,8 +487,8 @@
               <li class="card-box__item card">
                 <h3 class="card__title">На&nbsp;смартфоны и&nbsp;гаджеты</h3>
                 <p class="card__text">
-                  Меняйте минуты на&nbsp;скидку на&nbsp;смартфоны, умные
-                  колонки, и&nbsp;другие гаджеты. Курс обмена: 1&nbsp;минута =
+                  Меняйте минуты на&nbsp;скидку на&nbsp;смартфоны, умные колонки
+                  и&nbsp;другие гаджеты. Курс обмена: 1&nbsp;минута =
                   1&nbsp;рубль скидки, а&nbsp;с&nbsp;подпиской MiXX&nbsp;в
                   2&nbsp;раза выгоднее!
                 </p>
@@ -423,6 +498,7 @@
               class="btn popup__link js-gtm-event"
               data-modal="info-modal"
               data-event="change"
+              data-action="mincentre"
             >
               Иду менять
             </button>
@@ -432,22 +508,25 @@
 
       <section
         class="section section-calls dark-bg component-section wow fadeInUp"
+        id="honestCalls"
         data-wow-delay="0.5s"
       >
         <div class="container">
           <div class="section__text-block">
             <div class="section__label">Возможность <span>&#8470;</span>6</div>
             <h2 class="section__title">
-              <span class="text_blue">Честные</span> звонки внутри сети
+              По&nbsp;России <span class="text_blue">без&nbsp;доплат</span>
             </h2>
             <p class="section__text">
-              Общайтесь безлимитно с&nbsp;абонентами Tele2, <br />
-              не&nbsp;расходуя пакет минут, включенный в&nbsp;тарифный план
+              В&nbsp;поездках по&nbsp;России принимайте бесплатно входящие
+              вызовы и&nbsp;пользуйтесь минутами и&nbsp;гигабайтами, включенными
+              в&nbsp;тариф
             </p>
             <button
               class="btn popup__link js-gtm-event"
               data-modal="info-modal"
               data-event="yes"
+              data-action="change-text"
             >
               Подходит!
             </button>
@@ -469,14 +548,12 @@
       <section class="section section-help dark-bg component-section">
         <div class="container dark-block wow">
           <div class="section__text-block">
+            <div class="section__label">Возможность <span>&#8470;</span>7</div>
             <h2 class="section__title">
-              <span class="text_blue">Помощь</span> абонентам
+              <span class="text_blue">Заботимся</span> об&nbsp;абонентах
             </h2>
             <ul class="section__card-box card-box">
-              <li class="card-box__item card">
-                <div class="section__label card__label">
-                  Возможность <span>&#8470;</span>7
-                </div>
+              <li class="card-box__item card" id="sos">
                 <h3 class="card__title">SOS-пакет</h3>
                 <p class="card__text">
                   Оставайтесь на&nbsp;связи, даже если закончились деньги
@@ -484,18 +561,8 @@
                   бесплатно самыми необходимыми приложениями: WhatsApp, Viber,
                   Telegram, Я.Карты и&nbsp;Я.Навигатор
                 </p>
-                <button
-                  class="btn card__btn popup__link js-gtm-event"
-                  data-modal="info-modal"
-                  data-event="need"
-                >
-                  Мне надо
-                </button>
               </li>
-              <li class="card-box__item card">
-                <div class="section__label card__label">
-                  Возможность <span>&#8470;</span>8
-                </div>
+              <li class="card-box__item card" id="subscribeGuard">
                 <h3 class="card__title">Защита от нежелательных подписок</h3>
                 <p class="card__text">
                   Не&nbsp;беспокойтесь о&nbsp;случайном подключении подписок
@@ -503,15 +570,16 @@
                   код подтверждения: пока его не&nbsp;введете, подписка
                   не&nbsp;подключится
                 </p>
-                <button
-                  class="btn card__btn popup__link js-gtm-event"
-                  data-modal="info-modal"
-                  data-event="wow"
-                >
-                  Красота!
-                </button>
               </li>
             </ul>
+            <button
+              class="btn card__btn popup__link js-gtm-event"
+              data-modal="info-modal"
+              data-event="need"
+              data-action="change-text"
+            >
+              Мне надо
+            </button>
           </div>
           <div class="section__img wow getBlured">
             <img src="./img/page/cri2.png" alt="" />
@@ -525,7 +593,7 @@
       >
         <div class="container">
           <div class="section__text-block">
-            <div class="section__label">Возможность <span>&#8470;</span>9</div>
+            <div class="section__label">Возможность <span>&#8470;</span>8</div>
             <h2 class="section__title">
               <span class="text_blue">Маркет</span> Tele2
             </h2>
@@ -536,6 +604,7 @@
               class="btn popup__link js-gtm-event"
               data-modal="info-modal"
               data-event="like"
+              data-action="gbcentre"
             >
               Нравится
             </button>
@@ -557,23 +626,37 @@
       <section class="section section-more dark-bg component-section">
         <div class="container dark-block">
           <div class="section__text-block">
-            <div class="section__label">Возможность <span>&#8470;</span>10</div>
+            <div class="section__label">Возможность <span>&#8470;</span>9</div>
             <h2 class="section__title">
-              ...и еще <span class="text_blue">больше</span>
+              <span class="text_blue">Прокачайте</span> тариф
             </h2>
             <ul class="section__card-box card-box">
               <li class="card-box__item card">
                 <h3 class="card__title">MiXX от&nbsp;Tele2</h3>
                 <p class="card__text">
                   Интернет, музыка, кино и&nbsp;другие сервисы в&nbsp;одной
-                  подписке от&nbsp;Tele2&nbsp;&mdash; настраивайте для себя
+                  подписке от&nbsp;Tele2&nbsp;&mdash;
+                  <a
+                    href="https://q.tele2.ru/mixx"
+                    target="_blank"
+                    class="link js-gtm-event"
+                    data-event="text-link_tune"
+                    >настраивайте для себя</a
+                  >
                 </p>
               </li>
               <li class="card-box__item card">
                 <h3 class="card__title">Домашний интернет к&nbsp;тарифу</h3>
                 <p class="card__text">
-                  Выбирайте оптимальную скорость&nbsp;&mdash; общайтесь,
-                  играйте, смотрите видео в&nbsp;высоком разрешении без помех
+                  <a
+                    href="https://q.tele2.ru/home_internet"
+                    target="_blank"
+                    class="link js-gtm-event"
+                    data-event="text-link_choose"
+                    >Выбирайте</a
+                  >
+                  оптимальную скорость&nbsp;&mdash; общайтесь, играйте, смотрите
+                  видео в&nbsp;высоком разрешении без помех
                 </p>
               </li>
             </ul>
@@ -581,8 +664,9 @@
               class="btn popup__link js-gtm-event"
               data-modal="info-modal"
               data-event="giveme"
+              data-action="change-text"
             >
-              Дайте еще больше
+              Уже прокачиваю
             </button>
           </div>
           <div class="section__img wow getSharp">
@@ -642,7 +726,7 @@
         <div class="modal-box__background"></div>
         <div class="modal-box__content">
           <div class="modal-box__header">
-            <h4>Осталось только подключиться</h4>
+            <h4 class="modal-box__title">Осталось только подключиться</h4>
             <div class="close">
               <svg
                 width="32"
@@ -659,20 +743,17 @@
             <p class="modal-box__text">
               Переходите к&nbsp;нам со&nbsp;своим номером или выберите новый.
             </p>
-          </div>
-          <div class="modal-box__actions dark-bg">
-            <a
-              class="btn btn-primary close connect-btn js-gtm-event"
-              href="https://q.tele2.ru/tariffs"
-              target="_blank"
-              >Подключиться</a
-            >
-            <a
-              class="link already-btn js-gtm-event"
-              href="https://q.tele2.ru/lk"
-              target="_blank"
-              >Я&nbsp;уже абонент Tele2</a
-            >
+            <div class="modal-box__actions dark-bg">
+              <a
+                class="btn btn-primary close connect-btn js-gtm-event"
+                href="https://q.tele2.ru/tariffs"
+                target="_blank"
+                >Подключиться</a
+              >
+              <a class="link already-btn js-gtm-event" href=""
+                >Я&nbsp;уже абонент Tele2</a
+              >
+            </div>
           </div>
         </div>
       </div>
